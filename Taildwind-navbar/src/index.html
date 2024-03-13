@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar with Tailwind Css</title>
+    <link rel="stylesheet" href="../dist/style.css" />
+  </head>
+  <body class="bg-gray-200">
+    <nav class="bg-gray-800 px-4 py-3">
+      <div class="flex justify-between items-center">
+        <a href="">
+          <img src="../logo.png" alt="" width="50" />
+        </a>
+        <div class="hidden md:flex gap-2">
+          <a class="bg-gray-900 text-white px-5 py-3 rounded-md" href="#">
+            Dashboard
+          </a>
+          <a href="" class="text-white px-5 py-3 rounded-md hover:bg-white/5">
+            Team
+          </a>
+          <a
+            href="
+            "
+            class="text-white px-5 py-3 rounded-md hover:bg-white/5"
+          >
+            Proyects</a
+          >
+          <a
+            href="
+        "
+            class="text-white px-5 py-3 rounded-md hover:bg-white/5"
+          >
+            Calendar
+          </a>
+        </div>
+        <div class="flex gap-4">
+          <a href="" class="text-gray-400 py-3 px-2 hover:text-gray-200">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+          </a>
+          <a href="" class="text-gray-400 py-3 px-2 hover:text-gray-200">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-bell"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"
+              />
+              <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+            </svg>
+          </a>
+
+          <button
+            data-mobile-menu
+            class="text-gray-400 py-3 px-2 hover:text-gray-200 block md:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-menu"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4 8l16 0" />
+              <path d="M4 16l16 0" />
+            </svg>
+          </button>
+          <a
+            href="#"
+            class="block bg-blue-600 text-gray-200 px-5 py-3 rounded-md hover:bg-blue-600/80"
+            >Sign In</a
+          >
+        </div>
+      </div>
+      <!-- mobile menu -->
+      <div class="hidden" id="mobile-menu">
+        <div class="flex flex-col gap-1 py-3">
+          <a
+            class="bg-gray-900 text-white block px-3 py-2 rounded-md font-medium"
+            href=""
+            >Dashboard</a
+          >
+          <a
+            class="hover:bg-white/5 text-gray-300 text-white block px-3 py-2 rounded-md font-medium"
+            href="#"
+            >Team</a
+          >
+          <a
+            class="hover:bg-white/5 text-gray-300 text-white block px-3 py-2 rounded-md font-medium"
+            href="#"
+            >Projects</a
+          >
+          <a
+            class="hover:bg-white/5 text-gray-300 text-white block px-3 py-2 rounded-md font-medium"
+            href="#"
+            >Calendar</a
+          >
+        </div>
+      </div>
+    </nav>
+    <script>
+      let button = document.querySelector("[data-mobile-menu]");
+      let mobileMenu = document.getElementById("mobile-menu");
+      button.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
